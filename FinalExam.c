@@ -4,7 +4,7 @@
  * @brief
  * @version 0.1
  * @date 2022-12-07
- *
+ * 
  * @copyright Copyright (c) 2022
  *
  */
@@ -60,15 +60,125 @@ Kết luận: Ví dụ thể hiện việc chèn phần tử vào mảng tốn �
  */
 
 /**
- * @brief 
- 
+ * @brief Task 5
+    void selectionSort(int arr[], int n){
+        int countSwap = 0, countCompare = 0;
+        int index, maxN, temp;
+        for (int i = 0; i < n - 1; i++){
+            index = i;
+            maxN = arr[i];
+            for (int j = i + 1; j < n; j++){
+                countCompare++;
+                if (arr[j] > maxN){
+                    maxN = arr[j];
+                    index = j;
+                }
+            }
+            countCompare++;
+            if (index != i){
+                countSwap++;
+                temp = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp;
+            }
+        }
+    }
 */
 
 /**
- * @brief Task 7
+ * @brief Task 6
+Array number: 4 2 5 1 3
+Assuming expectation is an ascending array.
++) Bubble sort 
+    4 2 5 1 3
+
+    Because 2 < 4 swap 4 with 2
+    compare: 1
+    swap: 1
+    => 2 4 5 1 3
+
+    We have 4 < 5, no swap and continue
+    compare: 1
+    swap: 0
+    => 2 4 5 1 3
+    
+    Because 1 < 5 swap 1 with 5
+    compare: 1
+    swap: 1
+    => 2 4 1 5 3
+
+    Because 3 < 5 swap 3 with 5
+    compare: 1
+    swap: 1
+    => 2 4 1 3 5 
+    => Finished the position of the 5th element, back the first element to continue sorting
+
+    We have 2 < 4, no swap and continue
+    compare: 1
+    swap: 0
+    => 2 4 1 3 5
+
+    Because 1 < 4 swap 1 with 4
+    compare: 1
+    swap: 1
+    => 2 1 4 3 5
+
+    Because 3 < 4 swap 3 with 4
+    compare: 1
+    swap: 1
+    => 2 1 3 4 5
+    => Finished the position of the 4th element, back the first element to continue sorting
+
+    Because 1 < 2 swap 1 with 2
+    compare: 1
+    swap: 1
+    => 1 2 3 4 5
+
+    We have 2 < 3, no swap and continue
+    compare: 1
+    swap: 0
+    => Finished the position of the 3th element, back the first element to continue sorting
+
+    We have 1 < 2, no swap and continue
+    compare: 1
+    swap: 0
+    => Finished the position of the 2th element, back the first element to continue sorting
+    => Finished the position of the 1th element
+    => Done
+
+    Total compare: 10
+    Total swap: 6
++) Selection sort
+    4 2 5 1 3 
+
+    Find min number of array in range [0,4], replace it to position 0. 
+    compare: 4
+    swap: 1
+    => 1 2 5 4 3 
+
+    Find min number of array in range [1,4], replace it to position 1.
+    compare: 3 
+    swap: 0
+    => 1 2 5 4 3 
+    
+    Find min number of array in range [2,4], replace it to position 2.
+    compare: 2
+    swap: 1
+    => 1 2 3 4 5 
+    
+    Find min number of array in range [3,4], replace it to position 3.
+    compare: 1
+    swap: 0
+    => Done
+
+    Total compare: 10
+    Total swap: 2
  */
 
-/*
+
+
+/**
+ * @brief Task 7
 Array number: 4 2 5 1 3
 Assuming expectation is an ascending array.
 +) Selection sort
@@ -100,6 +210,7 @@ Assuming expectation is an ascending array.
 +) Insertion sort
     4 2 5 1 3
 
+    
 
 
 */
