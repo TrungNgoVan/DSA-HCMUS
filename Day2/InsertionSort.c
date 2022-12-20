@@ -1,3 +1,13 @@
+/**
+ * @file InsertionSort.c
+ * @author Ngo Van Trung (trung2601.it@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-12-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
