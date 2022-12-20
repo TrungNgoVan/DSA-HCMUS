@@ -51,7 +51,8 @@ int main()
 {
     int arr[] = {34, 10, 12, 30, 19, 42, 9, 37, 56, 27, 32};
     int length = sizeof(arr) / sizeof(arr[0]);
-    partition(arr,0,length - 1);
+    // partition(arr,0,length - 1);
+    quickSort(arr, 0, length - 1);
     displayArray(arr, &length);
     return 0;
 }

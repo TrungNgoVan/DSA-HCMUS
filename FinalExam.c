@@ -208,10 +208,6 @@ Assuming expectation is an ascending array.
 
 +) Insertion sort
     4 2 5 1 3
-
-    
-
-
 */
 
 
